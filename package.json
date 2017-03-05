@@ -1,7 +1,7 @@
 {
   "name": "twif",
   "version": "1.0.0",
-  "description": "Get the Twitter influential followers",
+  "description": "Get the Twitter influential followers by username",
   "main": "index.js",
   "scripts": {
     "test": "ava test.js"
