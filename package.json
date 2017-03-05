@@ -1,0 +1,23 @@
+{
+  "name": "twif",
+  "version": "1.0.0",
+  "description": "Get the Twitter influential followers",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceasbz/twif.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ceasbz/twif/issues"
+  },
+  "homepage": "https://github.com/ceasbz/twif#readme",
+  "dependencies": {
+    "csv-generate": "^1.0.0",
+    "get-twitter-followers": "^2.0.0"
+  }
+}
