@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/ceasbz/twif.git"
   },
-  "author": "",
+  "keywords": [
+    "twitter",
+    "influential",
+    "followers",
+    "username"
+  ],
+  "author": "Cauê Alves <ceasbz2@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ceasbz/twif/issues"
