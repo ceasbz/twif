@@ -7,19 +7,16 @@ const environmentVariables = [
     'ACCESS_TOKEN_SECRET'
 ];
 
+const tokens = {};
+
 environmentVariables.map(environmentVariable => {
     if (! process.env[environmentVariable]) {
         throw new Error(`Please, set the ${environmentVariable} environment variable.`);
         process.exit(1);
     }
-});
 
-const tokens = {
-    consumer_key: process.env.CONSUMER_KEY,
-    consumer_secret: process.env.CONSUMER_SECRET,
-    access_token: process.env.ACCESS_TOKEN,
-    access_token_secret: process.env.ACCESS_TOKEN_SECRET
-};
+    tokens[environmentVariable.toLocaleLowerCase()] = process.env[environmentVariable];
+});
 
 module.exports = (username, limit) => {
     const usernameTypeOf = typeof username;
