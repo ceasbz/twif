@@ -9,16 +9,16 @@ const environmentVariables = [
 
 const tokens = {};
 
-environmentVariables.map(environmentVariable => {
-    if (! process.env[environmentVariable]) {
-        throw new Error(`Please, set the ${environmentVariable} environment variable.`);
-        process.exit(1);
-    }
-
-    tokens[environmentVariable.toLocaleLowerCase()] = process.env[environmentVariable];
-});
-
 module.exports = (username, limit) => {
+
+    environmentVariables.map(environmentVariable => {
+        if (! process.env[environmentVariable]) {
+            throw new Error(`Please, set the ${environmentVariable} environment variable.`);
+        }
+
+        tokens[environmentVariable.toLocaleLowerCase()] = process.env[environmentVariable];
+    });
+
     const usernameTypeOf = typeof username;
     if (usernameTypeOf !== 'string') {
         throw new TypeError(`Expected a string but got ${usernameTypeOf}`);

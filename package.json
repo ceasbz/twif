@@ -25,5 +25,8 @@
   "dependencies": {
     "csv-generate": "^1.0.0",
     "get-twitter-followers": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2"
   }
 }
